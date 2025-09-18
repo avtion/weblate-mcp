@@ -34,6 +34,9 @@ func Load() (*Config, error) {
 	}
 
 	// Ensure the API URL ends with /api
+	// Remove trailing slash first
+	config.WeblateAPIURL = strings.TrimSuffix(config.WeblateAPIURL, "/")
+	// Add /api if not already present
 	if !strings.HasSuffix(config.WeblateAPIURL, "/api") {
 		config.WeblateAPIURL += "/api"
 	}
