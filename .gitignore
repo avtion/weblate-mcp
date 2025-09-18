@@ -9,6 +9,13 @@ dist/
 build/
 *.tsbuildinfo
 
+# Go build outputs
+weblate-mcp
+weblate-mcp-*
+*.exe
+coverage.out
+coverage.html
+
 # Environment variables
 .env
 .env.local
